@@ -1,0 +1,699 @@
+2023-04-27 15:53:54,170               logger    INFO - Command: cmsRun TnPTreeProducer_cfg.py isMC=True
+2023-04-27 15:53:54,172  TnPTreeProducer_cfg   ERROR - UL2016 is not a valid era
+2023-04-27 15:53:54,172  TnPTreeProducer_cfg    INFO - Producing electron SF tree
+2023-04-27 15:53:54,172  TnPTreeProducer_cfg    INFO - Producing photon SF tree
+2023-04-27 15:53:54,172  TnPTreeProducer_cfg    INFO - Producing HLT (trigger ele) efficiency tree
+2023-04-27 15:53:54,746    egmTreesSetup_cff    INFO - L1 matching will be applied for passHltDoubleEle33CaloIdLMWSeedLeg, passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg1
+**************************************************************
+b tagging needs to be run on uncorrected jets. Hence, the JECs
+will first be undone for 'updatedPatJetsUpdated' and then applied to
+'updatedPatJetsTransientCorrectedUpdated'.
+**************************************************************
+27-Apr-2023 15:54:00 CEST  Initiating request to open file file:/eos/user/a/akadlecs/ntuples/ntupleinput_mc.root
+27-Apr-2023 15:54:04 CEST  Successfully opened file file:/eos/user/a/akadlecs/ntuples/ntupleinput_mc.root
+                         : Booking "BDTG method" of type "BDT" from /afs/cern.ch/user/a/akadlecs/public/LowPtNtuple/CMSSW_10_6_13/src/EgammaAnalysis/TnPTreeProducer/data/el_ttH16_BDTG.weights.xml.
+                         : Reading weight file: /afs/cern.ch/user/a/akadlecs/public/LowPtNtuple/CMSSW_10_6_13/src/EgammaAnalysis/TnPTreeProducer/data/el_ttH16_BDTG.weights.xml
+<HEADER> DataSetInfo              : [Default] : Added class "Signal"
+<HEADER> DataSetInfo              : [Default] : Added class "Background"
+                         : Booked classifier "BDTG" of type: "BDT"
+                         : Booking "BDTG method" of type "BDT" from /afs/cern.ch/user/a/akadlecs/public/LowPtNtuple/CMSSW_10_6_13/src/EgammaAnalysis/TnPTreeProducer/data/el_tZqTTV16_BDTG.weights.xml.
+                         : Reading weight file: /afs/cern.ch/user/a/akadlecs/public/LowPtNtuple/CMSSW_10_6_13/src/EgammaAnalysis/TnPTreeProducer/data/el_tZqTTV16_BDTG.weights.xml
+<HEADER> DataSetInfo              : [Default] : Added class "Signal"
+<HEADER> DataSetInfo              : [Default] : Added class "Background"
+                         : Booked classifier "BDTG_200Cuts_Depth4_baggedGrad_1000trees_shrinkage0p1_electron" of type: "BDT"
+                         : Booking "BDTG method" of type "BDT" from /afs/cern.ch/user/a/akadlecs/public/LowPtNtuple/CMSSW_10_6_13/src/EgammaAnalysis/TnPTreeProducer/data/el_TOP16_BDTG.weights.xml.
+                         : Reading weight file: /afs/cern.ch/user/a/akadlecs/public/LowPtNtuple/CMSSW_10_6_13/src/EgammaAnalysis/TnPTreeProducer/data/el_TOP16_BDTG.weights.xml
+<HEADER> DataSetInfo              : [Default] : Added class "Signal"
+<HEADER> DataSetInfo              : [Default] : Added class "Background"
+                         : Booked classifier "BDTG_cuts200_depth4_trees1000_shrinkage0p1_elec" of type: "BDT"
+Begin processing the 1st record. Run 1, Event 18375102, LumiSection 2414 on stream 0 at 27-Apr-2023 15:54:15.678 CEST
+%MSG-w L3Absolute not found:  PATJetUpdater:updatedPatJetsUpdated  27-Apr-2023 15:54:16 CEST Run: 1 Event: 18375085
+L2L3Residual and L3Absolute are not part of the jetCorrFactors
+of module patJetCorrFactorsUpdated. Jets will remain uncorrected.
+%MSG
+----- Begin Fatal Exception 27-Apr-2023 15:54:26 CEST-----------------------
+An exception of category 'ProductNotFound' occurred while
+   [0] Processing  Event run: 1 lumi: 2414 event: 18375085 stream: 0
+   [1] Running path 'p'
+   [2] Calling method for module PatLowPtElectronTriggerCandProducer/'passHltDoubleEle33CaloIdLMWUnsLeg'
+Exception Message:
+Principal::getByToken: Found zero products matching all criteria
+Looking for type: edm::RefVector<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> >
+Looking for module label: probeLowPtEle
+Looking for productInstanceName: 
+
+   Additional Info:
+      [a] If you wish to continue processing events after a ProductNotFound exception,
+add "SkipEvent = cms.untracked.vstring('ProductNotFound')" to the "options" PSet in the configuration.
+
+----- End Fatal Exception -------------------------------------------------
+27-Apr-2023 15:54:26 CEST  Closed file file:/eos/user/a/akadlecs/ntuples/ntupleinput_mc.root
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 13 passed = 0 failed = 13
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     1    0         13          0         12          1 p
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0         13         13          0          0 evtCounter
+TrigReport     1    1         13          1         12          0 hltFilter
+TrigReport     1    2          1          1          0          0 eleVarHelper
+TrigReport     1    3          1          1          0          0 ptRatioRelForEle
+TrigReport     1    4          1          1          0          0 isoForEleFall17
+TrigReport     1    5          1          1          0          0 isoForEleSummer16
+TrigReport     1    6          1          1          0          0 isoForEleSpring15
+TrigReport     1    7          1          1          0          0 leptonMvaTTH
+TrigReport     1    8          1          1          0          0 leptonMvaGhent
+TrigReport     1    9          1          1          0          0 leptonMvaTOP
+TrigReport     1   10          1          1          0          0 goodElectrons
+TrigReport     1   11          1          1          0          0 tagEleCutBasedTight
+TrigReport     1   12          1          1          0          0 tagEle
+TrigReport     1   13          1          1          0          0 genEle
+TrigReport     1   14          1          1          0          0 genTagEle
+TrigReport     1   15          1          1          0          0 probeEleHLTsafe
+TrigReport     1   16          1          1          0          0 probeEleDoubleEleHLTsafe
+TrigReport     1   17          1          1          0          0 probeEleCutBasedVeto80X
+TrigReport     1   18          1          1          0          0 probeEleCutBasedVeto94X
+TrigReport     1   19          1          1          0          0 probeEleCutBasedVeto94XV2
+TrigReport     1   20          1          1          0          0 probeEleCutBasedLoose80X
+TrigReport     1   21          1          1          0          0 probeEleCutBasedLoose94X
+TrigReport     1   22          1          1          0          0 probeEleCutBasedLoose94XV2
+TrigReport     1   23          1          1          0          0 probeEleCutBasedMedium80X
+TrigReport     1   24          1          1          0          0 probeEleCutBasedMedium94X
+TrigReport     1   25          1          1          0          0 probeEleCutBasedMedium94XV2
+TrigReport     1   26          1          1          0          0 probeEleCutBasedTight80X
+TrigReport     1   27          1          1          0          0 probeEleCutBasedTight94X
+TrigReport     1   28          1          1          0          0 probeEleCutBasedTight94XV2
+TrigReport     1   29          1          1          0          0 probeEleMVA80Xwp80
+TrigReport     1   30          1          1          0          0 probeEleMVA80Xwp90
+TrigReport     1   31          1          1          0          0 probeEleMVA94Xwp80noiso
+TrigReport     1   32          1          1          0          0 probeEleMVA94Xwp80iso
+TrigReport     1   33          1          1          0          0 probeEleMVA94Xwp80noisoV2
+TrigReport     1   34          1          1          0          0 probeEleMVA94Xwp80isoV2
+TrigReport     1   35          1          1          0          0 probeEleMVA94Xwp90noiso
+TrigReport     1   36          1          1          0          0 probeEleMVA94Xwp90iso
+TrigReport     1   37          1          1          0          0 probeEleMVA94Xwp90noisoV2
+TrigReport     1   38          1          1          0          0 probeEleMVA94Xwp90isoV2
+TrigReport     1   39          1          1          0          0 probeEleMVA94XwpLoosenoiso
+TrigReport     1   40          1          1          0          0 probeEleMVA94XwpLooseiso
+TrigReport     1   41          1          1          0          0 probeEleMVA94XwpLoosenoisoV2
+TrigReport     1   42          1          1          0          0 probeEleMVA94XwpLooseisoV2
+TrigReport     1   43          1          1          0          0 probeEleMVA94XwpHZZisoV2
+TrigReport     1   44          1          1          0          0 probeEleCutBasedVeto94XV2MinPtCut
+TrigReport     1   45          1          1          0          0 probeEleCutBasedLoose94XV2MinPtCut
+TrigReport     1   46          1          1          0          0 probeEleCutBasedMedium94XV2MinPtCut
+TrigReport     1   47          1          1          0          0 probeEleCutBasedTight94XV2MinPtCut
+TrigReport     1   48          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleSCEtaMultiRangeCut
+TrigReport     1   49          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleSCEtaMultiRangeCut
+TrigReport     1   50          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleSCEtaMultiRangeCut
+TrigReport     1   51          1          1          0          0 probeEleCutBasedTight94XV2GsfEleSCEtaMultiRangeCut
+TrigReport     1   52          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleDEtaInSeedCut
+TrigReport     1   53          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleDEtaInSeedCut
+TrigReport     1   54          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleDEtaInSeedCut
+TrigReport     1   55          1          1          0          0 probeEleCutBasedTight94XV2GsfEleDEtaInSeedCut
+TrigReport     1   56          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleDPhiInCut
+TrigReport     1   57          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleDPhiInCut
+TrigReport     1   58          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleDPhiInCut
+TrigReport     1   59          1          1          0          0 probeEleCutBasedTight94XV2GsfEleDPhiInCut
+TrigReport     1   60          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport     1   61          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport     1   62          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport     1   63          1          1          0          0 probeEleCutBasedTight94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport     1   64          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport     1   65          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport     1   66          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport     1   67          1          1          0          0 probeEleCutBasedTight94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport     1   68          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleEInverseMinusPInverseCut
+TrigReport     1   69          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleEInverseMinusPInverseCut
+TrigReport     1   70          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleEInverseMinusPInverseCut
+TrigReport     1   71          1          1          0          0 probeEleCutBasedTight94XV2GsfEleEInverseMinusPInverseCut
+TrigReport     1   72          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleRelPFIsoScaledCut
+TrigReport     1   73          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleRelPFIsoScaledCut
+TrigReport     1   74          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleRelPFIsoScaledCut
+TrigReport     1   75          1          1          0          0 probeEleCutBasedTight94XV2GsfEleRelPFIsoScaledCut
+TrigReport     1   76          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleConversionVetoCut
+TrigReport     1   77          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleConversionVetoCut
+TrigReport     1   78          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleConversionVetoCut
+TrigReport     1   79          1          1          0          0 probeEleCutBasedTight94XV2GsfEleConversionVetoCut
+TrigReport     1   80          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleMissingHitsCut
+TrigReport     1   81          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleMissingHitsCut
+TrigReport     1   82          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleMissingHitsCut
+TrigReport     1   83          1          1          0          0 probeEleCutBasedTight94XV2GsfEleMissingHitsCut
+TrigReport     1   84          1          1          0          0 probeEle
+TrigReport     1   85          1          1          0          0 goodElectronProbesL1
+TrigReport     1   86          1          1          0          0 probeEleL1matched
+TrigReport     1   87          1          1          0          0 genProbeEle
+TrigReport     1   88          1          1          0          0 goodPhotons
+TrigReport     1   89          1          1          0          0 probePhoCutBasedLoose80X
+TrigReport     1   90          1          1          0          0 probePhoCutBasedLoose94X
+TrigReport     1   91          1          1          0          0 probePhoCutBasedLoose94XV2
+TrigReport     1   92          1          1          0          0 probePhoCutBasedMedium80X
+TrigReport     1   93          1          1          0          0 probePhoCutBasedMedium94X
+TrigReport     1   94          1          1          0          0 probePhoCutBasedMedium94XV2
+TrigReport     1   95          1          1          0          0 probePhoCutBasedTight80X
+TrigReport     1   96          1          1          0          0 probePhoCutBasedTight94X
+TrigReport     1   97          1          1          0          0 probePhoCutBasedTight94XV2
+TrigReport     1   98          1          1          0          0 probePhoMVA80Xwp80
+TrigReport     1   99          1          1          0          0 probePhoMVA94XV2wp80
+TrigReport     1  100          1          1          0          0 probePhoMVA80Xwp90
+TrigReport     1  101          1          1          0          0 probePhoMVA94XV2wp90
+TrigReport     1  102          1          1          0          0 probePhoCutBasedLoose94XV2MinPtCut
+TrigReport     1  103          1          1          0          0 probePhoCutBasedMedium94XV2MinPtCut
+TrigReport     1  104          1          1          0          0 probePhoCutBasedTight94XV2MinPtCut
+TrigReport     1  105          1          1          0          0 probePhoCutBasedLoose94XV2PhoSCEtaMultiRangeCut
+TrigReport     1  106          1          1          0          0 probePhoCutBasedMedium94XV2PhoSCEtaMultiRangeCut
+TrigReport     1  107          1          1          0          0 probePhoCutBasedTight94XV2PhoSCEtaMultiRangeCut
+TrigReport     1  108          1          1          0          0 probePhoCutBasedLoose94XV2PhoSingleTowerHadOverEmCut
+TrigReport     1  109          1          1          0          0 probePhoCutBasedMedium94XV2PhoSingleTowerHadOverEmCut
+TrigReport     1  110          1          1          0          0 probePhoCutBasedTight94XV2PhoSingleTowerHadOverEmCut
+TrigReport     1  111          1          1          0          0 probePhoCutBasedLoose94XV2PhoFull5x5SigmaIEtaIEtaCut
+TrigReport     1  112          1          1          0          0 probePhoCutBasedMedium94XV2PhoFull5x5SigmaIEtaIEtaCut
+TrigReport     1  113          1          1          0          0 probePhoCutBasedTight94XV2PhoFull5x5SigmaIEtaIEtaCut
+TrigReport     1  114          1          1          0          0 probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut
+TrigReport     1  115          1          1          0          0 probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut
+TrigReport     1  116          1          1          0          0 probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut
+TrigReport     1  117          1          1          0          0 probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut1
+TrigReport     1  118          1          1          0          0 probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut1
+TrigReport     1  119          1          1          0          0 probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut1
+TrigReport     1  120          1          1          0          0 probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut2
+TrigReport     1  121          1          1          0          0 probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut2
+TrigReport     1  122          1          1          0          0 probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut2
+TrigReport     1  123          1          1          0          0 probePho
+TrigReport     1  124          1          1          0          0 genProbePho
+TrigReport     1  125          1          1          0          0 hltFilter
+TrigReport     1  126          1          0          0          1 passHltDoubleEle33CaloIdLMWUnsLeg
+TrigReport     1  127          0          0          0          0 passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg2
+TrigReport     1  128          0          0          0          0 passHltEle27WPTightGsf
+TrigReport     1  129          0          0          0          0 passHltDoubleEle33CaloIdLMWSeedLegL1match
+TrigReport     1  130          0          0          0          0 passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg1L1match
+TrigReport     1  131          0          0          0          0 tnpPairingEleHLT
+TrigReport     1  132          0          0          0          0 tnpPairingEleIDs
+TrigReport     1  133          0          0          0          0 tnpPairingPhoIDs
+TrigReport     1  134          0          0          0          0 pileupReweightingProducer
+TrigReport     1  135          0          0          0          0 tnpEleTrig
+TrigReport     1  136          0          0          0          0 tnpEleIDs
+TrigReport     1  137          0          0          0          0 tnpPhoIDs
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited   Executed     Passed     Failed      Error Name
+TrigReport         13         13         13          0          0 TriggerResults
+TrigReport         33          1          1          0          0 egmGsfElectronIDs
+TrigReport         16          1          1          0          0 egmPhotonIDs
+TrigReport          1          1          1          0          0 eleVarHelper
+TrigReport         11          1          1          0          0 electronMVAValueMapProducer
+TrigReport         13         13         13          0          0 evtCounter
+TrigReport          1          1          1          0          0 genEle
+TrigReport          1          1          1          0          0 genProbeEle
+TrigReport          1          1          1          0          0 genProbePho
+TrigReport          1          1          1          0          0 genTagEle
+TrigReport          1          1          1          0          0 goodElectronProbesL1
+TrigReport          1          1          1          0          0 goodElectrons
+TrigReport          1          1          1          0          0 goodPhotons
+TrigReport         14         13          1         12          0 hltFilter
+TrigReport          1          1          1          0          0 isoForEleFall17
+TrigReport          1          1          1          0          0 isoForEleSpring15
+TrigReport          1          1          1          0          0 isoForEleSummer16
+TrigReport          1          1          1          0          0 leptonMvaGhent
+TrigReport          1          1          1          0          0 leptonMvaTOP
+TrigReport          1          1          1          0          0 leptonMvaTTH
+TrigReport         13         13         13          0          0 p
+TrigReport          0          0          0          0          0 passHltDoubleEle33CaloIdLMWSeedLegL1match
+TrigReport          1          1          0          0          1 passHltDoubleEle33CaloIdLMWUnsLeg
+TrigReport          0          0          0          0          0 passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg1L1match
+TrigReport          0          0          0          0          0 passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg2
+TrigReport          0          0          0          0          0 passHltEle27WPTightGsf
+TrigReport          1          1          1          0          0 patJetCorrFactorsTransientCorrectedUpdated
+TrigReport          1          1          1          0          0 patJetCorrFactorsUpdated
+TrigReport          1          1          1          0          0 pfDeepCSVTagInfosUpdated
+TrigReport          3          1          1          0          0 pfDeepFlavourJetTagsUpdated
+TrigReport          1          1          1          0          0 pfDeepFlavourTagInfosUpdated
+TrigReport          1          1          1          0          0 pfImpactParameterTagInfosUpdated
+TrigReport          1          1          1          0          0 pfInclusiveSecondaryVertexFinderTagInfosUpdated
+TrigReport          4          1          1          0          0 photonMVAValueMapProducer
+TrigReport          0          0          0          0          0 pileupReweightingProducer
+TrigReport          1          1          1          0          0 probeEle
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose80X
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94X
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleConversionVetoCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleDEtaInSeedCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleDPhiInCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleEInverseMinusPInverseCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleMissingHitsCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleRelPFIsoScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2GsfEleSCEtaMultiRangeCut
+TrigReport          1          1          1          0          0 probeEleCutBasedLoose94XV2MinPtCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium80X
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94X
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleConversionVetoCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleDEtaInSeedCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleDPhiInCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleEInverseMinusPInverseCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleMissingHitsCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleRelPFIsoScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2GsfEleSCEtaMultiRangeCut
+TrigReport          1          1          1          0          0 probeEleCutBasedMedium94XV2MinPtCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight80X
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94X
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleConversionVetoCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleDEtaInSeedCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleDPhiInCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleEInverseMinusPInverseCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleMissingHitsCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleRelPFIsoScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2GsfEleSCEtaMultiRangeCut
+TrigReport          1          1          1          0          0 probeEleCutBasedTight94XV2MinPtCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto80X
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94X
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleConversionVetoCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleDEtaInSeedCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleDPhiInCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleEInverseMinusPInverseCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleHadronicOverEMEnergyScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleMissingHitsCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleRelPFIsoScaledCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2GsfEleSCEtaMultiRangeCut
+TrigReport          1          1          1          0          0 probeEleCutBasedVeto94XV2MinPtCut
+TrigReport          1          1          1          0          0 probeEleDoubleEleHLTsafe
+TrigReport          1          1          1          0          0 probeEleHLTsafe
+TrigReport          1          1          1          0          0 probeEleL1matched
+TrigReport          1          1          1          0          0 probeEleMVA80Xwp80
+TrigReport          1          1          1          0          0 probeEleMVA80Xwp90
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp80iso
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp80isoV2
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp80noiso
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp80noisoV2
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp90iso
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp90isoV2
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp90noiso
+TrigReport          1          1          1          0          0 probeEleMVA94Xwp90noisoV2
+TrigReport          1          1          1          0          0 probeEleMVA94XwpHZZisoV2
+TrigReport          1          1          1          0          0 probeEleMVA94XwpLooseiso
+TrigReport          1          1          1          0          0 probeEleMVA94XwpLooseisoV2
+TrigReport          1          1          1          0          0 probeEleMVA94XwpLoosenoiso
+TrigReport          1          1          1          0          0 probeEleMVA94XwpLoosenoisoV2
+TrigReport          1          1          1          0          0 probePho
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose80X
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94X
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2MinPtCut
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2PhoFull5x5SigmaIEtaIEtaCut
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut1
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut2
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2PhoSCEtaMultiRangeCut
+TrigReport          1          1          1          0          0 probePhoCutBasedLoose94XV2PhoSingleTowerHadOverEmCut
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium80X
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94X
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2MinPtCut
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2PhoFull5x5SigmaIEtaIEtaCut
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut1
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut2
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2PhoSCEtaMultiRangeCut
+TrigReport          1          1          1          0          0 probePhoCutBasedMedium94XV2PhoSingleTowerHadOverEmCut
+TrigReport          1          1          1          0          0 probePhoCutBasedTight80X
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94X
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2MinPtCut
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2PhoFull5x5SigmaIEtaIEtaCut
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut1
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut2
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2PhoSCEtaMultiRangeCut
+TrigReport          1          1          1          0          0 probePhoCutBasedTight94XV2PhoSingleTowerHadOverEmCut
+TrigReport          1          1          1          0          0 probePhoMVA80Xwp80
+TrigReport          1          1          1          0          0 probePhoMVA80Xwp90
+TrigReport          1          1          1          0          0 probePhoMVA94XV2wp80
+TrigReport          1          1          1          0          0 probePhoMVA94XV2wp90
+TrigReport          1          1          1          0          0 ptRatioRelForEle
+TrigReport          1          1          1          0          0 selectedUpdatedPatJetsUpdated
+TrigReport          1          1          1          0          0 tagEle
+TrigReport          1          1          1          0          0 tagEleCutBasedTight
+TrigReport          0          0          0          0          0 tnpEleIDs
+TrigReport          0          0          0          0          0 tnpEleTrig
+TrigReport          0          0          0          0          0 tnpPairingEleHLT
+TrigReport          0          0          0          0          0 tnpPairingEleIDs
+TrigReport          0          0          0          0          0 tnpPairingPhoIDs
+TrigReport          0          0          0          0          0 tnpPhoIDs
+TrigReport          1          1          1          0          0 updatedPatJetsTransientCorrectedUpdated
+TrigReport          1          1          1          0          0 updatedPatJetsUpdated
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport       event loop CPU/event = 0.334952
+TimeReport      event loop Real/event = 0.991501
+TimeReport     sum Streams Real/event = 0.936040
+TimeReport efficiency CPU/Real/thread = 0.337823
+
+TimeReport ---------- Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.797033     0.797033  p
+TimeReport  per event     per exec  Name
+
+TimeReport -------End-Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport  per event     per exec  Name
+
+TimeReport ---------- Modules in Path: p ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000219     0.000219  evtCounter
+TimeReport   0.000078     0.000078  hltFilter
+TimeReport   0.000286     0.003719  eleVarHelper
+TimeReport   0.000049     0.000639  ptRatioRelForEle
+TimeReport   0.000007     0.000097  isoForEleFall17
+TimeReport   0.000001     0.000017  isoForEleSummer16
+TimeReport   0.000001     0.000009  isoForEleSpring15
+TimeReport   0.000066     0.000859  leptonMvaTTH
+TimeReport   0.000025     0.000327  leptonMvaGhent
+TimeReport   0.000026     0.000338  leptonMvaTOP
+TimeReport   0.000008     0.000106  goodElectrons
+TimeReport   0.000006     0.000077  tagEleCutBasedTight
+TimeReport   0.013187     0.171428  tagEle
+TimeReport   0.000011     0.000149  genEle
+TimeReport   0.000024     0.000315  genTagEle
+TimeReport   0.000002     0.000030  probeEleHLTsafe
+TimeReport   0.000001     0.000011  probeEleDoubleEleHLTsafe
+TimeReport   0.000001     0.000010  probeEleCutBasedVeto80X
+TimeReport   0.000001     0.000010  probeEleCutBasedVeto94X
+TimeReport   0.000001     0.000011  probeEleCutBasedVeto94XV2
+TimeReport   0.000001     0.000009  probeEleCutBasedLoose80X
+TimeReport   0.000001     0.000010  probeEleCutBasedLoose94X
+TimeReport   0.000001     0.000009  probeEleCutBasedLoose94XV2
+TimeReport   0.000001     0.000010  probeEleCutBasedMedium80X
+TimeReport   0.000001     0.000011  probeEleCutBasedMedium94X
+TimeReport   0.000001     0.000010  probeEleCutBasedMedium94XV2
+TimeReport   0.000001     0.000008  probeEleCutBasedTight80X
+TimeReport   0.000001     0.000010  probeEleCutBasedTight94X
+TimeReport   0.000001     0.000010  probeEleCutBasedTight94XV2
+TimeReport   0.000001     0.000008  probeEleMVA80Xwp80
+TimeReport   0.000001     0.000007  probeEleMVA80Xwp90
+TimeReport   0.000001     0.000015  probeEleMVA94Xwp80noiso
+TimeReport   0.000001     0.000008  probeEleMVA94Xwp80iso
+TimeReport   0.000001     0.000009  probeEleMVA94Xwp80noisoV2
+TimeReport   0.000001     0.000009  probeEleMVA94Xwp80isoV2
+TimeReport   0.000001     0.000008  probeEleMVA94Xwp90noiso
+TimeReport   0.000001     0.000008  probeEleMVA94Xwp90iso
+TimeReport   0.000001     0.000009  probeEleMVA94Xwp90noisoV2
+TimeReport   0.000001     0.000007  probeEleMVA94Xwp90isoV2
+TimeReport   0.000001     0.000009  probeEleMVA94XwpLoosenoiso
+TimeReport   0.000001     0.000008  probeEleMVA94XwpLooseiso
+TimeReport   0.000001     0.000007  probeEleMVA94XwpLoosenoisoV2
+TimeReport   0.000001     0.000008  probeEleMVA94XwpLooseisoV2
+TimeReport   0.000001     0.000007  probeEleMVA94XwpHZZisoV2
+TimeReport   0.000005     0.000060  probeEleCutBasedVeto94XV2MinPtCut
+TimeReport   0.000001     0.000013  probeEleCutBasedLoose94XV2MinPtCut
+TimeReport   0.000001     0.000010  probeEleCutBasedMedium94XV2MinPtCut
+TimeReport   0.000001     0.000010  probeEleCutBasedTight94XV2MinPtCut
+TimeReport   0.000001     0.000011  probeEleCutBasedVeto94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000001     0.000009  probeEleCutBasedLoose94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000001     0.000009  probeEleCutBasedMedium94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000001     0.000011  probeEleCutBasedTight94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000001     0.000010  probeEleCutBasedVeto94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000009  probeEleCutBasedLoose94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000010  probeEleCutBasedMedium94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000009  probeEleCutBasedTight94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000010  probeEleCutBasedVeto94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000011  probeEleCutBasedLoose94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000010  probeEleCutBasedMedium94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000010  probeEleCutBasedTight94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000009  probeEleCutBasedVeto94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000008  probeEleCutBasedLoose94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000010  probeEleCutBasedMedium94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000008  probeEleCutBasedTight94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000008  probeEleCutBasedVeto94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000010  probeEleCutBasedLoose94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000009  probeEleCutBasedMedium94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000008  probeEleCutBasedTight94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000010  probeEleCutBasedVeto94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000014  probeEleCutBasedLoose94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000009  probeEleCutBasedMedium94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000010  probeEleCutBasedTight94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000009  probeEleCutBasedVeto94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000001     0.000009  probeEleCutBasedLoose94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000001     0.000011  probeEleCutBasedMedium94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000002     0.000020  probeEleCutBasedTight94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000001     0.000011  probeEleCutBasedVeto94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000009  probeEleCutBasedLoose94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000009  probeEleCutBasedMedium94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000011  probeEleCutBasedTight94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000010  probeEleCutBasedVeto94XV2GsfEleMissingHitsCut
+TimeReport   0.000001     0.000009  probeEleCutBasedLoose94XV2GsfEleMissingHitsCut
+TimeReport   0.000001     0.000010  probeEleCutBasedMedium94XV2GsfEleMissingHitsCut
+TimeReport   0.000001     0.000009  probeEleCutBasedTight94XV2GsfEleMissingHitsCut
+TimeReport   0.001356     0.017634  probeEle
+TimeReport   0.000009     0.000115  goodElectronProbesL1
+TimeReport   0.001349     0.017534  probeEleL1matched
+TimeReport   0.000003     0.000033  genProbeEle
+TimeReport   0.000045     0.000579  goodPhotons
+TimeReport   0.000004     0.000051  probePhoCutBasedLoose80X
+TimeReport   0.000001     0.000009  probePhoCutBasedLoose94X
+TimeReport   0.000001     0.000009  probePhoCutBasedLoose94XV2
+TimeReport   0.000001     0.000008  probePhoCutBasedMedium80X
+TimeReport   0.000001     0.000007  probePhoCutBasedMedium94X
+TimeReport   0.000001     0.000010  probePhoCutBasedMedium94XV2
+TimeReport   0.000001     0.000008  probePhoCutBasedTight80X
+TimeReport   0.000001     0.000007  probePhoCutBasedTight94X
+TimeReport   0.000001     0.000007  probePhoCutBasedTight94XV2
+TimeReport   0.000001     0.000008  probePhoMVA80Xwp80
+TimeReport   0.000001     0.000007  probePhoMVA94XV2wp80
+TimeReport   0.000001     0.000007  probePhoMVA80Xwp90
+TimeReport   0.000001     0.000007  probePhoMVA94XV2wp90
+TimeReport   0.000001     0.000013  probePhoCutBasedLoose94XV2MinPtCut
+TimeReport   0.000001     0.000010  probePhoCutBasedMedium94XV2MinPtCut
+TimeReport   0.000001     0.000009  probePhoCutBasedTight94XV2MinPtCut
+TimeReport   0.000001     0.000010  probePhoCutBasedLoose94XV2PhoSCEtaMultiRangeCut
+TimeReport   0.000001     0.000008  probePhoCutBasedMedium94XV2PhoSCEtaMultiRangeCut
+TimeReport   0.000001     0.000009  probePhoCutBasedTight94XV2PhoSCEtaMultiRangeCut
+TimeReport   0.000001     0.000008  probePhoCutBasedLoose94XV2PhoSingleTowerHadOverEmCut
+TimeReport   0.000001     0.000008  probePhoCutBasedMedium94XV2PhoSingleTowerHadOverEmCut
+TimeReport   0.000001     0.000007  probePhoCutBasedTight94XV2PhoSingleTowerHadOverEmCut
+TimeReport   0.000001     0.000009  probePhoCutBasedLoose94XV2PhoFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000009  probePhoCutBasedMedium94XV2PhoFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000009  probePhoCutBasedTight94XV2PhoFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000015  probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut
+TimeReport   0.000001     0.000007  probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut
+TimeReport   0.000001     0.000009  probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut
+TimeReport   0.000001     0.000008  probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut1
+TimeReport   0.000001     0.000009  probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut1
+TimeReport   0.000001     0.000011  probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut1
+TimeReport   0.000001     0.000008  probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut2
+TimeReport   0.000001     0.000007  probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut2
+TimeReport   0.000001     0.000008  probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut2
+TimeReport   0.001356     0.017622  probePho
+TimeReport   0.000004     0.000051  genProbePho
+TimeReport   0.000000     0.000000  hltFilter
+TimeReport   0.001839     0.023906  passHltDoubleEle33CaloIdLMWUnsLeg
+TimeReport   0.000000     0.000000  passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg2
+TimeReport   0.000000     0.000000  passHltEle27WPTightGsf
+TimeReport   0.000000     0.000000  passHltDoubleEle33CaloIdLMWSeedLegL1match
+TimeReport   0.000000     0.000000  passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg1L1match
+TimeReport   0.000000     0.000000  tnpPairingEleHLT
+TimeReport   0.000000     0.000000  tnpPairingEleIDs
+TimeReport   0.000000     0.000000  tnpPairingPhoIDs
+TimeReport   0.000000     0.000000  pileupReweightingProducer
+TimeReport   0.000000     0.000000  tnpEleTrig
+TimeReport   0.000000     0.000000  tnpEleIDs
+TimeReport   0.000000     0.000000  tnpPhoIDs
+TimeReport  per event    per visit  Name
+
+TimeReport ---------- Module Summary ---[Real sec]----
+TimeReport  per event     per exec    per visit  Name
+TimeReport   0.000001     0.000001     0.000001  TriggerResults
+TimeReport   0.000210     0.002729     0.002729  egmGsfElectronIDs
+TimeReport   0.000068     0.000885     0.000885  egmPhotonIDs
+TimeReport   0.000286     0.003719     0.003719  eleVarHelper
+TimeReport   0.000080     0.001037     0.001037  electronMVAValueMapProducer
+TimeReport   0.000219     0.000219     0.000219  evtCounter
+TimeReport   0.000011     0.000149     0.000149  genEle
+TimeReport   0.000003     0.000033     0.000033  genProbeEle
+TimeReport   0.000004     0.000051     0.000051  genProbePho
+TimeReport   0.000024     0.000315     0.000315  genTagEle
+TimeReport   0.000009     0.000115     0.000115  goodElectronProbesL1
+TimeReport   0.000008     0.000106     0.000106  goodElectrons
+TimeReport   0.000045     0.000579     0.000579  goodPhotons
+TimeReport   0.000078     0.000078     0.000073  hltFilter
+TimeReport   0.000007     0.000097     0.000097  isoForEleFall17
+TimeReport   0.000001     0.000009     0.000009  isoForEleSpring15
+TimeReport   0.000001     0.000017     0.000017  isoForEleSummer16
+TimeReport   0.000025     0.000327     0.000327  leptonMvaGhent
+TimeReport   0.000026     0.000338     0.000338  leptonMvaTOP
+TimeReport   0.000066     0.000859     0.000859  leptonMvaTTH
+TimeReport   0.000003     0.000003     0.000003  p
+TimeReport   0.000000     0.000000     0.000000  passHltDoubleEle33CaloIdLMWSeedLegL1match
+TimeReport   0.001839     0.023906     0.023906  passHltDoubleEle33CaloIdLMWUnsLeg
+TimeReport   0.000000     0.000000     0.000000  passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg1L1match
+TimeReport   0.000000     0.000000     0.000000  passHltEle23Ele12CaloIdLTrackIdLIsoVLLeg2
+TimeReport   0.000000     0.000000     0.000000  passHltEle27WPTightGsf
+TimeReport   0.000083     0.001083     0.001083  patJetCorrFactorsTransientCorrectedUpdated
+TimeReport   0.000619     0.008048     0.008048  patJetCorrFactorsUpdated
+TimeReport   0.000031     0.000406     0.000406  pfDeepCSVTagInfosUpdated
+TimeReport   0.024584     0.319586     0.319586  pfDeepFlavourJetTagsUpdated
+TimeReport   0.000097     0.001256     0.001256  pfDeepFlavourTagInfosUpdated
+TimeReport   0.690098     8.971276     8.971276  pfImpactParameterTagInfosUpdated
+TimeReport   0.000629     0.008182     0.008182  pfInclusiveSecondaryVertexFinderTagInfosUpdated
+TimeReport   0.000062     0.000810     0.000810  photonMVAValueMapProducer
+TimeReport   0.000000     0.000000     0.000000  pileupReweightingProducer
+TimeReport   0.001356     0.017634     0.017634  probeEle
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedLoose80X
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedLoose94X
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedLoose94XV2
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedLoose94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedLoose94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedLoose94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000014     0.000014  probeEleCutBasedLoose94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000008     0.000008  probeEleCutBasedLoose94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedLoose94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedLoose94XV2GsfEleMissingHitsCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedLoose94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedLoose94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000001     0.000013     0.000013  probeEleCutBasedLoose94XV2MinPtCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedMedium80X
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedMedium94X
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedMedium94XV2
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedMedium94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedMedium94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedMedium94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedMedium94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedMedium94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedMedium94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedMedium94XV2GsfEleMissingHitsCut
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedMedium94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedMedium94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedMedium94XV2MinPtCut
+TimeReport   0.000001     0.000008     0.000008  probeEleCutBasedTight80X
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedTight94X
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedTight94XV2
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedTight94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedTight94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedTight94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedTight94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000008     0.000008  probeEleCutBasedTight94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000008     0.000008  probeEleCutBasedTight94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedTight94XV2GsfEleMissingHitsCut
+TimeReport   0.000002     0.000020     0.000020  probeEleCutBasedTight94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedTight94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedTight94XV2MinPtCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedVeto80X
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedVeto94X
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedVeto94XV2
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedVeto94XV2GsfEleConversionVetoCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedVeto94XV2GsfEleDEtaInSeedCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedVeto94XV2GsfEleDPhiInCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedVeto94XV2GsfEleEInverseMinusPInverseCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedVeto94XV2GsfEleFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000008     0.000008  probeEleCutBasedVeto94XV2GsfEleHadronicOverEMEnergyScaledCut
+TimeReport   0.000001     0.000010     0.000010  probeEleCutBasedVeto94XV2GsfEleMissingHitsCut
+TimeReport   0.000001     0.000009     0.000009  probeEleCutBasedVeto94XV2GsfEleRelPFIsoScaledCut
+TimeReport   0.000001     0.000011     0.000011  probeEleCutBasedVeto94XV2GsfEleSCEtaMultiRangeCut
+TimeReport   0.000005     0.000060     0.000060  probeEleCutBasedVeto94XV2MinPtCut
+TimeReport   0.000001     0.000011     0.000011  probeEleDoubleEleHLTsafe
+TimeReport   0.000002     0.000030     0.000030  probeEleHLTsafe
+TimeReport   0.001349     0.017534     0.017534  probeEleL1matched
+TimeReport   0.000001     0.000008     0.000008  probeEleMVA80Xwp80
+TimeReport   0.000001     0.000007     0.000007  probeEleMVA80Xwp90
+TimeReport   0.000001     0.000008     0.000008  probeEleMVA94Xwp80iso
+TimeReport   0.000001     0.000009     0.000009  probeEleMVA94Xwp80isoV2
+TimeReport   0.000001     0.000015     0.000015  probeEleMVA94Xwp80noiso
+TimeReport   0.000001     0.000009     0.000009  probeEleMVA94Xwp80noisoV2
+TimeReport   0.000001     0.000008     0.000008  probeEleMVA94Xwp90iso
+TimeReport   0.000001     0.000007     0.000007  probeEleMVA94Xwp90isoV2
+TimeReport   0.000001     0.000008     0.000008  probeEleMVA94Xwp90noiso
+TimeReport   0.000001     0.000009     0.000009  probeEleMVA94Xwp90noisoV2
+TimeReport   0.000001     0.000007     0.000007  probeEleMVA94XwpHZZisoV2
+TimeReport   0.000001     0.000008     0.000008  probeEleMVA94XwpLooseiso
+TimeReport   0.000001     0.000008     0.000008  probeEleMVA94XwpLooseisoV2
+TimeReport   0.000001     0.000009     0.000009  probeEleMVA94XwpLoosenoiso
+TimeReport   0.000001     0.000007     0.000007  probeEleMVA94XwpLoosenoisoV2
+TimeReport   0.001356     0.017622     0.017622  probePho
+TimeReport   0.000004     0.000051     0.000051  probePhoCutBasedLoose80X
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedLoose94X
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedLoose94XV2
+TimeReport   0.000001     0.000013     0.000013  probePhoCutBasedLoose94XV2MinPtCut
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedLoose94XV2PhoFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000015     0.000015  probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut1
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedLoose94XV2PhoGenericRhoPtScaledCut2
+TimeReport   0.000001     0.000010     0.000010  probePhoCutBasedLoose94XV2PhoSCEtaMultiRangeCut
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedLoose94XV2PhoSingleTowerHadOverEmCut
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedMedium80X
+TimeReport   0.000001     0.000007     0.000007  probePhoCutBasedMedium94X
+TimeReport   0.000001     0.000010     0.000010  probePhoCutBasedMedium94XV2
+TimeReport   0.000001     0.000010     0.000010  probePhoCutBasedMedium94XV2MinPtCut
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedMedium94XV2PhoFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000007     0.000007  probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut1
+TimeReport   0.000001     0.000007     0.000007  probePhoCutBasedMedium94XV2PhoGenericRhoPtScaledCut2
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedMedium94XV2PhoSCEtaMultiRangeCut
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedMedium94XV2PhoSingleTowerHadOverEmCut
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedTight80X
+TimeReport   0.000001     0.000007     0.000007  probePhoCutBasedTight94X
+TimeReport   0.000001     0.000007     0.000007  probePhoCutBasedTight94XV2
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedTight94XV2MinPtCut
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedTight94XV2PhoFull5x5SigmaIEtaIEtaCut
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut
+TimeReport   0.000001     0.000011     0.000011  probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut1
+TimeReport   0.000001     0.000008     0.000008  probePhoCutBasedTight94XV2PhoGenericRhoPtScaledCut2
+TimeReport   0.000001     0.000009     0.000009  probePhoCutBasedTight94XV2PhoSCEtaMultiRangeCut
+TimeReport   0.000001     0.000007     0.000007  probePhoCutBasedTight94XV2PhoSingleTowerHadOverEmCut
+TimeReport   0.000001     0.000008     0.000008  probePhoMVA80Xwp80
+TimeReport   0.000001     0.000007     0.000007  probePhoMVA80Xwp90
+TimeReport   0.000001     0.000007     0.000007  probePhoMVA94XV2wp80
+TimeReport   0.000001     0.000007     0.000007  probePhoMVA94XV2wp90
+TimeReport   0.000049     0.000639     0.000639  ptRatioRelForEle
+TimeReport   0.000938     0.012198     0.012198  selectedUpdatedPatJetsUpdated
+TimeReport   0.013187     0.171428     0.171428  tagEle
+TimeReport   0.000006     0.000077     0.000077  tagEleCutBasedTight
+TimeReport   0.000000     0.000000     0.000000  tnpEleIDs
+TimeReport   0.000000     0.000000     0.000000  tnpEleTrig
+TimeReport   0.000000     0.000000     0.000000  tnpPairingEleHLT
+TimeReport   0.000000     0.000000     0.000000  tnpPairingEleIDs
+TimeReport   0.000000     0.000000     0.000000  tnpPairingPhoIDs
+TimeReport   0.000000     0.000000     0.000000  tnpPhoIDs
+TimeReport   0.000032     0.000414     0.000414  updatedPatJetsTransientCorrectedUpdated
+TimeReport   0.000071     0.000927     0.000927  updatedPatJetsUpdated
+TimeReport  per event     per exec    per visit  Name
+
+T---Report end!
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 L3Absolute not found -w PATJetUpdater:up                       1        1
+    2 Fatal Exception      -s PostModuleEvent                        1        1
+    3 fileAction           -s file_close                             1        1
+    4 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 L3Absolute not found 1/18375085                        
+    2 Fatal Exception      1/18375085                        
+    3 fileAction           PostGlobalEndRun                  
+    4 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 1                   1
+System                  4                   4
+
+dropped waiting message count 0
